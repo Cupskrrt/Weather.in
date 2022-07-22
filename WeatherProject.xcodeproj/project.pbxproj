@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8212B28288B386500F0AEAA /* RecentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8212B27288B386500F0AEAA /* RecentView.swift */; };
+		F8212B2A288B3A9600F0AEAA /* EarthquakeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8212B29288B3A9600F0AEAA /* EarthquakeAPI.swift */; };
+		F8212B2C288B3FD300F0AEAA /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8212B2B288B3FD300F0AEAA /* NewsView.swift */; };
+		F8212B2E288B40D700F0AEAA /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8212B2D288B40D700F0AEAA /* WeatherView.swift */; };
+		F8212B30288B429A00F0AEAA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8212B2F288B429A00F0AEAA /* LocationManager.swift */; };
 		F8B509AA288AD94E001610A4 /* WeatherProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B509A9288AD94E001610A4 /* WeatherProjectApp.swift */; };
 		F8B509AC288AD94E001610A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B509AB288AD94E001610A4 /* ContentView.swift */; };
 		F8B509AE288AD94F001610A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B509AD288AD94F001610A4 /* Assets.xcassets */; };
@@ -14,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F81A50CB288B500200F75B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F8212B27288B386500F0AEAA /* RecentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentView.swift; sourceTree = "<group>"; };
+		F8212B29288B3A9600F0AEAA /* EarthquakeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeAPI.swift; sourceTree = "<group>"; };
+		F8212B2B288B3FD300F0AEAA /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		F8212B2D288B40D700F0AEAA /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		F8212B2F288B429A00F0AEAA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F8B509A6288AD94E001610A4 /* WeatherProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B509A9288AD94E001610A4 /* WeatherProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProjectApp.swift; sourceTree = "<group>"; };
 		F8B509AB288AD94E001610A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +43,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F8212B31288B42C200F0AEAA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F8212B2F288B429A00F0AEAA /* LocationManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F8212B32288B42CF00F0AEAA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F8212B29288B3A9600F0AEAA /* EarthquakeAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F8212B33288B443B00F0AEAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8212B27288B386500F0AEAA /* RecentView.swift */,
+				F8212B2B288B3FD300F0AEAA /* NewsView.swift */,
+				F8212B2D288B40D700F0AEAA /* WeatherView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F8B5099D288AD94E001610A4 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +90,10 @@
 			children = (
 				F8B509A9288AD94E001610A4 /* WeatherProjectApp.swift */,
 				F8B509AB288AD94E001610A4 /* ContentView.swift */,
+				F81A50CB288B500200F75B5C /* Info.plist */,
+				F8212B33288B443B00F0AEAA /* View */,
+				F8212B32288B42CF00F0AEAA /* API */,
+				F8212B31288B42C200F0AEAA /* Manager */,
 				F8B509AD288AD94F001610A4 /* Assets.xcassets */,
 				F8B509AF288AD94F001610A4 /* Preview Content */,
 			);
@@ -138,7 +179,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B509AC288AD94E001610A4 /* ContentView.swift in Sources */,
+				F8212B28288B386500F0AEAA /* RecentView.swift in Sources */,
 				F8B509AA288AD94E001610A4 /* WeatherProjectApp.swift in Sources */,
+				F8212B30288B429A00F0AEAA /* LocationManager.swift in Sources */,
+				F8212B2E288B40D700F0AEAA /* WeatherView.swift in Sources */,
+				F8212B2C288B3FD300F0AEAA /* NewsView.swift in Sources */,
+				F8212B2A288B3A9600F0AEAA /* EarthquakeAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +316,7 @@
 				DEVELOPMENT_TEAM = C48T274BQ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeatherProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +346,7 @@
 				DEVELOPMENT_TEAM = C48T274BQ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeatherProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
