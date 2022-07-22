@@ -34,7 +34,7 @@ extension LocationManager: CLLocationManagerDelegate {
         }
     }
     
-    func getCoordinate(){
+    func getWeather(){
         let coordinate = self.locationManager.location != nil ? self.locationManager.location!.coordinate : CLLocationCoordinate2D()
         
         let api = "32cea26e651369fa37b0807fee657b6b"
