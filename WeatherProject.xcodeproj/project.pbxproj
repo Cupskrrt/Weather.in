@@ -14,6 +14,8 @@
 		F8A0F150288BF52700993434 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0F14F288BF52700993434 /* WeatherManager.swift */; };
 		F8A0F152288BF8D500993434 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0F151288BF8D500993434 /* WeatherView.swift */; };
 		F8A1EAF5288BFEA400770E1E /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1EAF4288BFEA400770E1E /* WeatherViewModel.swift */; };
+		F8A1EAFA288C0C7F00770E1E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1EAF9288C0C7F00770E1E /* LocationManager.swift */; };
+		F8A1EAFC288C0DD400770E1E /* CoorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1EAFB288C0DD400770E1E /* CoorView.swift */; };
 		F8B509AA288AD94E001610A4 /* WeatherProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B509A9288AD94E001610A4 /* WeatherProjectApp.swift */; };
 		F8B509AC288AD94E001610A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B509AB288AD94E001610A4 /* ContentView.swift */; };
 		F8B509AE288AD94F001610A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B509AD288AD94F001610A4 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 		F8A0F14F288BF52700993434 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		F8A0F151288BF8D500993434 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		F8A1EAF4288BFEA400770E1E /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		F8A1EAF9288C0C7F00770E1E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F8A1EAFB288C0DD400770E1E /* CoorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoorView.swift; sourceTree = "<group>"; };
 		F8B509A6288AD94E001610A4 /* WeatherProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B509A9288AD94E001610A4 /* WeatherProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProjectApp.swift; sourceTree = "<group>"; };
 		F8B509AB288AD94E001610A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				F8A0F14F288BF52700993434 /* WeatherManager.swift */,
+				F8A1EAF9288C0C7F00770E1E /* LocationManager.swift */,
+				F8A1EAFB288C0DD400770E1E /* CoorView.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -194,7 +200,9 @@
 			files = (
 				F8B509AC288AD94E001610A4 /* ContentView.swift in Sources */,
 				F8A1EAF5288BFEA400770E1E /* WeatherViewModel.swift in Sources */,
+				F8A1EAFA288C0C7F00770E1E /* LocationManager.swift in Sources */,
 				F8A0F14E288BF12800993434 /* WeatherAPI.swift in Sources */,
+				F8A1EAFC288C0DD400770E1E /* CoorView.swift in Sources */,
 				F8A0F150288BF52700993434 /* WeatherManager.swift in Sources */,
 				F8212B28288B386500F0AEAA /* RecentView.swift in Sources */,
 				F8B509AA288AD94E001610A4 /* WeatherProjectApp.swift in Sources */,

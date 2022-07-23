@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct ContentView: View {
     
@@ -17,6 +18,8 @@ struct ContentView: View {
                 WeatherView(viewModel: weatherViewModel(weatherApi: WeatherAPI()))
                     .padding(.top)
                     .frame(alignment: .center)
+                CoorView()
+                
                 Spacer()
                 //News
                 NewsView()
@@ -35,6 +38,7 @@ struct ContentView: View {
                 //Recent Earthquake Form
                 RecentView()
                     .frame(width: 380, height: 200)
+                
                 
             }
         }

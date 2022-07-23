@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-public final class WeatherAPI: NSObject{
+public final class WeatherAPI: NSObject,ObservableObject{
     
     private let locationManager = CLLocationManager()
     private let APIKEY = "29028be3ee77bbc292618a77dd161e12"
@@ -17,6 +17,8 @@ public final class WeatherAPI: NSObject{
     public override init(){
         super.init()
         locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = kCLDistanceFilterNone
     }
     
     public func loadWeatherData(_ completionHandler: @escaping((Weather) -> Void)){
