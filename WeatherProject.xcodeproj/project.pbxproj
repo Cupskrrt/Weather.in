@@ -10,8 +10,10 @@
 		F8212B28288B386500F0AEAA /* RecentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8212B27288B386500F0AEAA /* RecentView.swift */; };
 		F8212B2A288B3A9600F0AEAA /* EarthquakeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8212B29288B3A9600F0AEAA /* EarthquakeAPI.swift */; };
 		F8212B2C288B3FD300F0AEAA /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8212B2B288B3FD300F0AEAA /* NewsView.swift */; };
-		F8212B2E288B40D700F0AEAA /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8212B2D288B40D700F0AEAA /* WeatherView.swift */; };
-		F8212B30288B429A00F0AEAA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8212B2F288B429A00F0AEAA /* LocationManager.swift */; };
+		F8A0F14E288BF12800993434 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0F14D288BF12800993434 /* WeatherAPI.swift */; };
+		F8A0F150288BF52700993434 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0F14F288BF52700993434 /* WeatherManager.swift */; };
+		F8A0F152288BF8D500993434 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A0F151288BF8D500993434 /* WeatherView.swift */; };
+		F8A1EAF5288BFEA400770E1E /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1EAF4288BFEA400770E1E /* WeatherViewModel.swift */; };
 		F8B509AA288AD94E001610A4 /* WeatherProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B509A9288AD94E001610A4 /* WeatherProjectApp.swift */; };
 		F8B509AC288AD94E001610A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B509AB288AD94E001610A4 /* ContentView.swift */; };
 		F8B509AE288AD94F001610A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B509AD288AD94F001610A4 /* Assets.xcassets */; };
@@ -23,8 +25,10 @@
 		F8212B27288B386500F0AEAA /* RecentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentView.swift; sourceTree = "<group>"; };
 		F8212B29288B3A9600F0AEAA /* EarthquakeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeAPI.swift; sourceTree = "<group>"; };
 		F8212B2B288B3FD300F0AEAA /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
-		F8212B2D288B40D700F0AEAA /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
-		F8212B2F288B429A00F0AEAA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F8A0F14D288BF12800993434 /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		F8A0F14F288BF52700993434 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		F8A0F151288BF8D500993434 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		F8A1EAF4288BFEA400770E1E /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		F8B509A6288AD94E001610A4 /* WeatherProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B509A9288AD94E001610A4 /* WeatherProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProjectApp.swift; sourceTree = "<group>"; };
 		F8B509AB288AD94E001610A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,7 +50,7 @@
 		F8212B31288B42C200F0AEAA /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				F8212B2F288B429A00F0AEAA /* LocationManager.swift */,
+				F8A0F14F288BF52700993434 /* WeatherManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -55,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				F8212B29288B3A9600F0AEAA /* EarthquakeAPI.swift */,
+				F8A0F14D288BF12800993434 /* WeatherAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -64,9 +69,17 @@
 			children = (
 				F8212B27288B386500F0AEAA /* RecentView.swift */,
 				F8212B2B288B3FD300F0AEAA /* NewsView.swift */,
-				F8212B2D288B40D700F0AEAA /* WeatherView.swift */,
+				F8A0F151288BF8D500993434 /* WeatherView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F8A1EAF6288BFEAC00770E1E /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8A1EAF4288BFEA400770E1E /* WeatherViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		F8B5099D288AD94E001610A4 = {
@@ -91,6 +104,7 @@
 				F8B509A9288AD94E001610A4 /* WeatherProjectApp.swift */,
 				F8B509AB288AD94E001610A4 /* ContentView.swift */,
 				F81A50CB288B500200F75B5C /* Info.plist */,
+				F8A1EAF6288BFEAC00770E1E /* View Model */,
 				F8212B33288B443B00F0AEAA /* View */,
 				F8212B32288B42CF00F0AEAA /* API */,
 				F8212B31288B42C200F0AEAA /* Manager */,
@@ -179,12 +193,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B509AC288AD94E001610A4 /* ContentView.swift in Sources */,
+				F8A1EAF5288BFEA400770E1E /* WeatherViewModel.swift in Sources */,
+				F8A0F14E288BF12800993434 /* WeatherAPI.swift in Sources */,
+				F8A0F150288BF52700993434 /* WeatherManager.swift in Sources */,
 				F8212B28288B386500F0AEAA /* RecentView.swift in Sources */,
 				F8B509AA288AD94E001610A4 /* WeatherProjectApp.swift in Sources */,
-				F8212B30288B429A00F0AEAA /* LocationManager.swift in Sources */,
-				F8212B2E288B40D700F0AEAA /* WeatherView.swift in Sources */,
 				F8212B2C288B3FD300F0AEAA /* NewsView.swift in Sources */,
 				F8212B2A288B3A9600F0AEAA /* EarthquakeAPI.swift in Sources */,
+				F8A0F152288BF8D500993434 /* WeatherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         Section{
             VStack{
                 //Weather
                 Spacer()
-                WeatherView()
+                WeatherView(viewModel: weatherViewModel(weatherApi: WeatherAPI()))
                     .padding(.top)
                     .frame(alignment: .center)
                 Spacer()

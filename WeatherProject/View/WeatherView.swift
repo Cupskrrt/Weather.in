@@ -6,19 +6,28 @@
 //
 
 import SwiftUI
-import MapKit
 
 struct WeatherView: View {
+    @ObservedObject var viewModel: weatherViewModel
     
-    @ObservedObject private var locationManager = LocationManager()
     var body: some View {
-       Text("P")
+        VStack{
+            HStack{
+                Text(viewModel.temprature)
+                    .font(.system(size: 20))
+                Image(systemName: viewModel.weatherIcon)
+                    .font(.system(size: 18))
+            }
+            Text(viewModel.cityName)
+                .font(.system(size: 27))
+        }
+        .onAppear(perform: viewModel.refresh)
     }
 }
-
 
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherView()
+        WeatherView(viewModel: weatherViewModel(weatherApi: WeatherAPI()))
     }
 }
+

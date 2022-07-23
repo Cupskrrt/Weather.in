@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct earthquake: Codable, Identifiable {
-    let id = UUID()
+struct earthquake: Codable{
     var waktu_gempa: String
     var lintang: String
     var bujur: String
