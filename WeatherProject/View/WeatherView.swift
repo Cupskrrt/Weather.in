@@ -6,28 +6,33 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct WeatherView: View {
-    @ObservedObject var viewModel: weatherViewModel
+    
+    @StateObject var WVM = WeatherViewModel()
     
     var body: some View {
         VStack{
             HStack{
-                Text(viewModel.temprature)
+                Text(WVM.temp)
                     .font(.system(size: 20))
-                Image(systemName: viewModel.weatherIcon)
-                    .font(.system(size: 18))
+                WebImage(url: URL(string: "http://openweathermap.org/img/wn/\(WVM.icon)@2x.png"))
+                    .resizable()
+                    .frame(width: 40, height: 40)
             }
-            Text(viewModel.cityName)
-                .font(.system(size: 27))
+            Text(WVM.main)
+            Text(WVM.description)
+                .font(.subheadline)
+            Text(WVM.name)
+                .font(.title)
         }
-        .onAppear(perform: viewModel.refresh)
     }
 }
 
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherView(viewModel: weatherViewModel(weatherApi: WeatherAPI()))
+        WeatherView()
     }
 }
 

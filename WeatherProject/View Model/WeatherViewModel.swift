@@ -6,38 +6,26 @@
 //
 
 import Foundation
-import SwiftUI
 
-private let defaultIcon = "?"
-private let iconMap = [
-    "Drizzle" : "cloud.rain.fill",
-    "Thunderstorm" : "cloud.bolt.rain",
-    "Rain" : "cloud.heavyrain.fill",
-    "Clear" : "sun.max",
-    "Cloud" : "cloud.fill",
-]
-
-public class weatherViewModel: ObservableObject{
-    @Published var cityName: String = "City Name"
-    @Published var temprature: String = "--"
-    @Published var weatherDescription: String = "--"
-    @Published var weatherIcon: String = "moon"
-
+class WeatherViewModel: ObservableObject{
+    @Published var main: String = ""
+    @Published var description: String = ""
+    @Published var icon: String = ""
+    @Published var temp: String = ""
+    @Published var name: String = ""
     
-    public let weatherApi : WeatherAPI
-    
-    public init(weatherApi : WeatherAPI){
-        self.weatherApi = weatherApi
-    }
-    
-    public func refresh(){
-        weatherApi.loadWeatherData{ weather in
-            DispatchQueue.main.async {
-                self.cityName = weather.city
-                self.temprature = "\(weather.temprature)°C"
-                self.weatherDescription = weather.description.capitalized
-                self.weatherIcon = iconMap [weather.iconName] ?? defaultIcon
+    init(){
+        Misc().getData(urlString: "https://api.openweathermap.org/data/2.5/weather?lat=-6,248244&lon=106,966206&appid=29028be3ee77bbc292618a77dd161e12&units=metric") { (weatherResult:weatherResponse?) in
+            if let weatherResult = weatherResult {
+                DispatchQueue.main.async {
+                    self.main = weatherResult.weather[0].main ?? "No Weather"
+                    self.description = weatherResult.weather[0].description ?? "No Description"
+                    self.icon = weatherResult.weather[0].icon ?? "No Icon"
+                    self.temp = "\(weatherResult.main.temp)°C"
+                    self.name = weatherResult.name ?? "No City"
+                }
             }
         }
     }
+    
 }

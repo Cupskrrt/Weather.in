@@ -15,28 +15,23 @@ struct ContentView: View {
             VStack{
                 //Weather
                 Spacer()
-                WeatherView(viewModel: weatherViewModel(weatherApi: WeatherAPI()))
-                    .padding(.top)
-                    .frame(alignment: .center)
-                CoorView()
-                
+                WeatherView()
                 Spacer()
                 //News
                 NewsView()
                     .frame(width: 300, height: 150, alignment: .center)
-                
                 Spacer()
                 //Recent Earthquake Text
                 Rectangle()
                     .frame(height: 2)
-                    .foregroundColor(.black)
+                    .foregroundColor(.secondary)
                 Text("Recent Earthquake")
                 Rectangle()
                     .frame(height: 2)
-                    .foregroundColor(.black)
+                    .foregroundColor(.secondary)
                 
                 //Recent Earthquake Form
-                RecentView()
+                GempaView()
                     .frame(width: 380, height: 200)
                 
                 
