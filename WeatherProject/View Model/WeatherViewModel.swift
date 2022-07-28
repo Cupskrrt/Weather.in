@@ -15,7 +15,7 @@ class WeatherViewModel: ObservableObject{
     @Published var name: String = ""
     
     init(){
-        Misc().getData(urlString: "https://api.openweathermap.org/data/2.5/weather?lat=-6,248244&lon=106,966206&appid=29028be3ee77bbc292618a77dd161e12&units=metric") { (weatherResult:weatherResponse?) in
+        Misc().getData(urlString: "https://api.openweathermap.org/data/2.5/weather?lat=-6,248244&lon=106,966206&appid=\(apiKeyWeather)&units=metric") { (weatherResult:weatherResponse?) in
             if let weatherResult = weatherResult {
                 DispatchQueue.main.async {
                     self.main = weatherResult.weather[0].main ?? "No Weather"

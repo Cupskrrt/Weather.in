@@ -20,13 +20,16 @@ class GempaViewModel: ObservableObject {
     init () {
         Misc().getData(urlString: "https://cuaca-gempa-rest-api.vercel.app/quake") { (gempaResult:gempaResponse?) in
             if let gempaResult = gempaResult {
-                self.tanggal = gempaResult.data.tanggal ?? ""
-                self.jam = gempaResult.data.jam ?? ""
-                self.magnitude = gempaResult.data.magnitude ?? ""
-                self.kedalaman = gempaResult.data.kedalaman ?? ""
-                self.wilayah = gempaResult.data.wilayah ?? ""
-                self.dirasakan = gempaResult.data.dirasakan ?? ""
-                self.shakemap = gempaResult.data.shakemap ?? ""
+                DispatchQueue.main.async {
+                    self.tanggal = gempaResult.data.tanggal ?? ""
+                    self.jam = gempaResult.data.jam ?? ""
+                    self.magnitude = gempaResult.data.magnitude ?? ""
+                    self.kedalaman = gempaResult.data.kedalaman ?? ""
+                    self.wilayah = gempaResult.data.wilayah ?? ""
+                    self.dirasakan = gempaResult.data.dirasakan ?? ""
+                    self.shakemap = gempaResult.data.shakemap ?? ""
+                }
+                
             }
         }
     }

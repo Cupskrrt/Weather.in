@@ -11,6 +11,9 @@
 		F821174428914A1700EC72D7 /* GempaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821174328914A1700EC72D7 /* GempaViewModel.swift */; };
 		F821174628914C8300EC72D7 /* GempaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821174528914C8300EC72D7 /* GempaView.swift */; };
 		F8212B2C288B3FD300F0AEAA /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8212B2B288B3FD300F0AEAA /* NewsView.swift */; };
+		F83334492892A39A001C70DA /* Static.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83334482892A39A001C70DA /* Static.swift */; };
+		F833344B2892A8FD001C70DA /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833344A2892A8FD001C70DA /* NewsData.swift */; };
+		F833344D2892AB0E001C70DA /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833344C2892AB0E001C70DA /* NewsViewModel.swift */; };
 		F83B468B288EDE0D00899BA2 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B468A288EDE0D00899BA2 /* Misc.swift */; };
 		F83B468E288EDE6100899BA2 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B468D288EDE6100899BA2 /* WeatherData.swift */; };
 		F83B4692288EE1C100899BA2 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F83B4691288EE1C100899BA2 /* SDWebImageSwiftUI */; };
@@ -28,6 +31,9 @@
 		F821174328914A1700EC72D7 /* GempaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GempaViewModel.swift; sourceTree = "<group>"; };
 		F821174528914C8300EC72D7 /* GempaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GempaView.swift; sourceTree = "<group>"; };
 		F8212B2B288B3FD300F0AEAA /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		F83334482892A39A001C70DA /* Static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Static.swift; sourceTree = "<group>"; };
+		F833344A2892A8FD001C70DA /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
+		F833344C2892AB0E001C70DA /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		F83B468A288EDE0D00899BA2 /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
 		F83B468D288EDE6100899BA2 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		F8A0F151288BF8D500993434 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
@@ -65,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				F83B468A288EDE0D00899BA2 /* Misc.swift */,
+				F83334482892A39A001C70DA /* Static.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -72,6 +79,7 @@
 		F83B468F288EDE6A00899BA2 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				F833344A2892A8FD001C70DA /* NewsData.swift */,
 				F83B468D288EDE6100899BA2 /* WeatherData.swift */,
 				F82117412891493E00EC72D7 /* GempaData.swift */,
 			);
@@ -83,6 +91,7 @@
 			children = (
 				F8A1EAF4288BFEA400770E1E /* WeatherViewModel.swift */,
 				F821174328914A1700EC72D7 /* GempaViewModel.swift */,
+				F833344C2892AB0E001C70DA /* NewsViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -205,12 +214,15 @@
 			files = (
 				F8B509AC288AD94E001610A4 /* ContentView.swift in Sources */,
 				F821174628914C8300EC72D7 /* GempaView.swift in Sources */,
+				F83334492892A39A001C70DA /* Static.swift in Sources */,
 				F8A1EAF5288BFEA400770E1E /* WeatherViewModel.swift in Sources */,
 				F83B468B288EDE0D00899BA2 /* Misc.swift in Sources */,
 				F8B509AA288AD94E001610A4 /* WeatherProjectApp.swift in Sources */,
 				F821174428914A1700EC72D7 /* GempaViewModel.swift in Sources */,
 				F8212B2C288B3FD300F0AEAA /* NewsView.swift in Sources */,
+				F833344B2892A8FD001C70DA /* NewsData.swift in Sources */,
 				F83B468E288EDE6100899BA2 /* WeatherData.swift in Sources */,
+				F833344D2892AB0E001C70DA /* NewsViewModel.swift in Sources */,
 				F8A0F152288BF8D500993434 /* WeatherView.swift in Sources */,
 				F82117422891493E00EC72D7 /* GempaData.swift in Sources */,
 			);

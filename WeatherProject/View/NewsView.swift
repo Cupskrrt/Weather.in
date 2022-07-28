@@ -6,12 +6,24 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct NewsView: View {
+    
+    @StateObject var NVM = NewsViewModel()
+    
     var body: some View {
-        ScrollView(.horizontal){
+        ScrollView(.vertical){
             HStack{
-                Rectangle()
+                WebImage(url: URL(string: NVM.urlToImage))
+                    .resizable()
+                    .frame(width: 120, height: 120)
+                VStack(alignment: .leading, spacing: 6){
+                    Text(NVM.publishedAt)
+                        .font(.caption2)
+                    Text(NVM.title)
+                        .font(.subheadline)
+                }
             }
         }
     }
