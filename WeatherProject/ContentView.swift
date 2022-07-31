@@ -19,7 +19,7 @@ struct ContentView: View {
                 Spacer()
                 //News
                 NewsView()
-                    .frame(width: 380, height: 190, alignment: .center)
+                    .frame(width: 380, height: 220)
                 Spacer()
                 //Recent Earthquake Text
                 Rectangle()

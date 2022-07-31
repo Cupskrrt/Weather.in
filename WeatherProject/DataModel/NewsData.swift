@@ -6,21 +6,23 @@
 //
 
 import Foundation
+struct newsResponse: Codable{
+    let articles: [Articles]
+}
 
-public struct newsResponse: Codable{
-    public struct Articles: Codable{
-        public struct Source: Codable{
-            public let name: String?
-        }
-        public let source: Source
-        public let author: String?
-        public let title: String?
-        public let description: String?
-        public let url: String?
-        public let urlToImage: String?
-        public let publishedAt: String?
-        public let content: String?
-    }
+struct Articles: Codable, Identifiable{
+    let id = UUID()
     
-    public let articles: [Articles]
+    let author: String?
+    let title: String?
+    let description: String?
+    let url: String?
+    let urlToImage: String?
+    let publishedAt: String?
+    let content: String?
+    let source: Source
+}
+
+struct Source: Codable{
+    let name: String?
 }
