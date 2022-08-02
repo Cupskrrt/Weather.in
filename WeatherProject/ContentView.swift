@@ -11,20 +11,30 @@ import CoreLocation
 struct ContentView: View {
     
     var body: some View {
-        Section{
+        NavigationView{
             VStack{
+                CooView()
                 //Weather
-                Spacer()
-                WeatherView()
-                Spacer()
-                //News
-                NewsView()
-                    .frame(width: 380, height: 220)
-                Spacer()
-                //Recent Earthquake Text
+                NavigationLink(){
+                    TodayWeatherView()
+                } label: {
+                    WeatherView()
+                }
+                .foregroundColor(.primary)
+                .padding(.bottom, 15)
+
                 Rectangle()
                     .frame(height: 2)
                     .foregroundColor(.secondary)
+                    .padding(.bottom, 10)
+                //News
+                NewsView()
+                    .frame(width: 380, height: 220)
+                Rectangle()
+                    .frame(height: 2)
+                    .foregroundColor(.secondary)
+                    .padding(.top, 10)
+                //Recent Earthquake Text
                 Text("Recent Earthquake")
                 Rectangle()
                     .frame(height: 2)
@@ -32,13 +42,14 @@ struct ContentView: View {
                 
                 //Recent Earthquake Form
                 GempaView()
-                    .frame(width: 380, height: 200)
+                    .frame(width: 380, height: 300)
                 
                 
             }
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

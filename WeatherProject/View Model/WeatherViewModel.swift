@@ -6,8 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
+import CoreLocation
 
 class WeatherViewModel: ObservableObject{
+    
+    @ObservedObject private var locationManager = LocationManager()
+    
     @Published var main: String = ""
     @Published var description: String = ""
     @Published var icon: String = ""
@@ -15,9 +20,12 @@ class WeatherViewModel: ObservableObject{
     @Published var name: String = ""
     
     init(){
-        Misc().getData(urlString: "https://api.openweathermap.org/data/2.5/weather?lat=-6,248244&lon=106,966206&appid=\(apiKeyWeather)&units=metric") { (weatherResult:weatherResponse?) in
+        
+        let coordinate = self.locationManager.location != nil ? self.locationManager.location!.coordinate : CLLocationCoordinate2D()
+        
+        Misc().getData(urlString: "https://api.openweathermap.org/data/2.5/weather?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&appid=\(apiKeyWeather)&units=metric") { (weatherResult:weatherResponse?) in
             if let weatherResult = weatherResult {
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [self] in
                     self.main = weatherResult.weather[0].main ?? "No Weather"
                     self.description = weatherResult.weather[0].description ?? "No Description"
                     self.icon = weatherResult.weather[0].icon ?? "No Icon"

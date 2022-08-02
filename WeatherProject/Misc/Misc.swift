@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class Misc: ObservableObject{
     
@@ -38,4 +39,3 @@ class Misc: ObservableObject{
         }.resume()
     }
 }
-
