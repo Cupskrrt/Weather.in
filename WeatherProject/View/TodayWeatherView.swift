@@ -2,21 +2,18 @@
 //  TodayWeatherView.swift
 //  WeatherProject
 //
-//  Created by Luthfi Khan on 01/08/22.
+//  Created by Luthfi Khan on 03/08/22.
 //
 
 import SwiftUI
 
 struct TodayWeatherView: View {
-    
-    @State var WVM = WeatherViewModel()
-    
     var body: some View {
-        Text("KNTL")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct MoreWeatherView_Previews: PreviewProvider {
+struct TodayWeatherView_Previews: PreviewProvider {
     static var previews: some View {
         TodayWeatherView()
     }

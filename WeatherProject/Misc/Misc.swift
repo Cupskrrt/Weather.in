@@ -27,7 +27,6 @@ class Misc: ObservableObject{
                 completion(nil)
                 return
             }
-            
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             guard let decodedData = try? decoder.decode(T.self, from: data) else {
@@ -39,3 +38,4 @@ class Misc: ObservableObject{
         }.resume()
     }
 }
+
