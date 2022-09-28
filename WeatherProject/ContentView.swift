@@ -29,17 +29,6 @@ struct ContentView: View {
                 //News
                 NewsView()
                     .frame(width: 380, height: 220)
-                VStack(){
-                    NavigationLink() {
-                        MoreNewsView()
-                    } label: {
-                        Text("More News")
-                    }
-                    .frame(width: 320, height: 40)
-                    .background(.thinMaterial)
-                    .cornerRadius(10)
-                }
-                .frame(maxWidth: .infinity)
                 Rectangle()
                     .frame(height: 2)
                     .foregroundColor(.secondary)
